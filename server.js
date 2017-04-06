@@ -1,6 +1,3 @@
-/* Showing Mongoose's "Populated" Method (18.3.8)
-*/
-
 // Dependencies
 var express = require("express");
 var bodyParser = require("body-parser");
@@ -49,7 +46,7 @@ db.once("open", function() {
 // A GET request to scrape the echojs website
 app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with request
-  request("http://www.echojs.com/", function(error, response, html) {
+  request("https://www.gizmodo.com/", function(error, response, html) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
     var $ = cheerio.load(html);
     // Now, we grab every h2 within an article tag, and do the following:
@@ -59,7 +56,7 @@ app.get("/scrape", function(req, res) {
       var result = {};
 
       // Add the text and href of every link, and save them as properties of the result object
-      result.title = $(this).children("a").text();
+      result.title = $(this).children("a").text().trim();
       result.link = $(this).children("a").attr("href");
 
       // Using our Article model, create a new entry
