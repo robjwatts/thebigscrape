@@ -23,7 +23,7 @@
 
 ![alt text](https://github.com/robjwatts/thebigscrape/blob/master/screenshots/seeanddeletecomment.gif "Deleting!")
 
-#### Please fork and star as you'd like. Thanks for reading!
+#### Thanks for reading!
 
 
 
