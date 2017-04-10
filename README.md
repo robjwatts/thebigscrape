@@ -1,1 +1,3 @@
-This app is scraping headlines and links from the popular tech blog, Gizmodo. It uses Cheerio and MongoDB technologies.
+# The Big Scrape -- A Gizmodo Web Scraper App!
+
+
